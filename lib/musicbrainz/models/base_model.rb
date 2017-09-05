@@ -33,7 +33,7 @@ module MusicBrainz
 				hash = escape_strings(hash)
 				query_val = build_query(hash)
 				underscored_name = underscore_name
-				client.load(underscored_name.to_sym, { query: query_val, limit: 10 }, { binding: underscored_name.insert(-1,"_search").to_sym })
+				client.load(underscored_name.to_sym, { query: query_val, limit: 25 }, { binding: underscored_name.insert(-1,"_search").to_sym })
 			end
 
 			class ::String
