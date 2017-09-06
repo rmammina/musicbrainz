@@ -12,6 +12,7 @@ module MusicBrainz
           type: (xml.attribute('type').value rescue nil),
           name: (xml.xpath('./name').text.gsub(/[`’]/, "'") rescue nil),
           country: (xml.xpath('./country').text rescue nil),
+          area: (xml.xpath('./area/name').text rescue nil),
           date_begin: (xml.xpath('./life-span/begin').text rescue nil),
           date_end: (xml.xpath('./life-span/end').text rescue nil)
         }.merge(Relations.parse(xml))
