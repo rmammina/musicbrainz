@@ -11,6 +11,7 @@ module MusicBrainz
           id: (xml.attribute('id').value rescue nil),
           type: (xml.attribute('type').value rescue nil),
           name: (xml.xpath('./name').text.gsub(/[`’]/, "'") rescue nil),
+          gender: (xml.xpath('./gender')).value rescue nil),
           country: (xml.xpath('./country').text rescue nil),
           area: (xml.xpath('./area/name').text rescue nil),
           date_begin: (xml.xpath('./life-span/begin').text rescue nil),
