@@ -5,6 +5,7 @@ module MusicBrainz
     field :type, String
     field :name, String
     field :country, String
+    field :gender, String
     field :area, String
     field :date_begin, Date
     field :date_end, Date
